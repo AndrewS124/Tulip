@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Cont del tulipan */
+.tulipan {
+    position: relative;
+    width: 80px;
+    height: 300px;
+    z-index: 2;
+}
+
+.tallo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 220px;
+    background: linear-gradient(to right, #8BC34A, #4CAF50);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(139, 195, 74, 0.5);
+    z-index: 2;
+/*     animation: moverTallo 3s infinite ease-in-out;
+ */}
+
+.hoja {
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    background: linear-gradient(to bottom, #8BC34A, #4CAF50);
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hoja-1 {
+    top: 150px;
+    right: 50px;
+    position: absolute;
+    transform: rotate(-40deg);
+    border-radius: 0% 50% 50% 50%;
+    z-index: 1;
+    animation: moverHoja1 5s infinite ease-in-out;
+
+}
+
+@keyframes moverHoja1 {
+
+    0%,
+    100% {
+        transform: rotate(-40deg);
+    }
+
+    50% {
+        transform: rotate(-48deg);
+    }
+}
+
+.hoja-2 {
+    top: 150px;
+    right: -12px;
+    transform: rotate(40deg);
+    border-radius: 0% 50% 50% 50%;
+    animation: moverHoja2 5s infinite ease-in-out;
+}
+
+@keyframes moverHoja2 {
+
+    0%,
+    100% {
+        transform: rotate(50deg);
+    }
+
+    50% {
+        transform: rotate(55deg);
+    }
+}
+
+
+/* petalos FF6F91?? o red */
+.petalo {
+    position: absolute;
+    width: 60px;
+    height: 90px;
+    background: linear-gradient(to bottom, #FF0000, #FF0000);
+    border-radius: 50% 50% 0 50%;
+    transform-origin: bottom center;
+    box-shadow: 0 0 10px red;
+    transition: transform 0.5s ease-in-out;
+    z-index: 2  ;
+}
+
+.petalo-1 {
+    top: 0;
+    left: 50%;
+    animation: moverPetalo1 3s infinite ease-in-out;
+}
+
+.petalo-2 {
+    top: 5px;
+    left: 40%;
+    animation: moverPetalo2 4s infinite ease-in-out;
+}
+
+.petalo-3 {
+    top: 5px;
+    right: 40%;
+    border-radius: 50% 50% 50% 50%;
+    animation: moverPetalo3 3.5s infinite ease-in-out;
+}
+
+@keyframes moverPetalo1 {
+
+    0%,
+    100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    50% {
+        transform: translateX(-50%) rotate(-5deg);
+    }
+}
+
+@keyframes moverPetalo2 {
+
+    0%,
+    100% {
+        transform: translateX(-50%) rotate(-20deg);
+    }
+
+    50% {
+        transform: translateX(-50%) rotate(-25deg);
+    }
+}
+
+@keyframes moverPetalo3 {
+
+    0%,
+    100% {
+        transform: translateX(50%) rotate(20deg);
+    }
+
+    50% {
+        transform: translateX(50%) rotate(15deg);
+    }
+}
+
+/* tulipan */
+.tulipan::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent 70%);
+    border-radius: 50%;
+    z-index: 3;
+}
+
+/* estrellas */
+.estrella {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: brillar 2s infinite ease-in-out;
+}
+
+@keyframes brillar {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* Estilos para el contenedor de Spotify */
+.spotify-container {
+    position: absolute;
+    bottom: 20px; /* Ajusta la posición vertical */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Asegura que esté debajo del tulipán si es necesario */
+}
+
+/* Ajustes adicionales para el iframe de Spotify */
+.spotify-container iframe {
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
