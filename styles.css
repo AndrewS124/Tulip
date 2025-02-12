@@ -20,30 +20,30 @@ body {
 .tallo {
     position: absolute;
     bottom: 0;
+    top: 80px;
     left: 50%;
     transform: translateX(-50%);
     width: 8px;
-    height: 220px;
-    background: linear-gradient(to right, #8BC34A, #4CAF50);
+    height: 160px;
+    background: linear-gradient(to right, #528a44,#66834b);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(139, 195, 74, 0.5);
     z-index: 2;
-/*     animation: moverTallo 3s infinite ease-in-out;
- */}
+/*     animation: moverTallo 3s infinite ease-in-out;*/
+}
 
 .hoja {
     position: absolute;
-    width: 40px;
+    width: 35px;
     height: 80px;
-    background: linear-gradient(to bottom, #8BC34A, #4CAF50);
+    background: linear-gradient(to bottom, #528a44,#66834b);
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hoja-1 {
-    top: 150px;
-    right: 50px;
+    top: 110px;
+    right: 45px;
     position: absolute;
     transform: rotate(-40deg);
     border-radius: 0% 50% 50% 50%;
@@ -56,17 +56,17 @@ body {
 
     0%,
     100% {
-        transform: rotate(-40deg);
+        transform: rotate(-35deg);
     }
 
     50% {
-        transform: rotate(-48deg);
+        transform: rotate(-42deg);
     }
 }
 
 .hoja-2 {
-    top: 150px;
-    right: -12px;
+    top: 110px;
+    right: -5px;
     transform: rotate(40deg);
     border-radius: 0% 50% 50% 50%;
     animation: moverHoja2 5s infinite ease-in-out;
@@ -76,11 +76,11 @@ body {
 
     0%,
     100% {
-        transform: rotate(50deg);
+        transform: rotate(45deg);
     }
 
     50% {
-        transform: rotate(55deg);
+        transform: rotate(50deg);
     }
 }
 
@@ -90,10 +90,10 @@ body {
     position: absolute;
     width: 60px;
     height: 90px;
-    background: linear-gradient(to bottom, #FF0000, #FF0000);
+    background: linear-gradient(to bottom, #e6234e, #ff5d8d);
     border-radius: 50% 50% 0 50%;
     transform-origin: bottom center;
-    box-shadow: 0 0 10px red;
+    box-shadow: 0 0 10px #e6234e;
     transition: transform 0.5s ease-in-out;
     z-index: 2  ;
 }
@@ -104,16 +104,17 @@ body {
     animation: moverPetalo1 3s infinite ease-in-out;
 }
 
-.petalo-2 {
+.petalo-2 { 
     top: 5px;
     left: 40%;
+    border-radius: 0% 50% 50% 37%;
     animation: moverPetalo2 4s infinite ease-in-out;
 }
 
 .petalo-3 {
     top: 5px;
     right: 40%;
-    border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 0% 37% 50%;
     animation: moverPetalo3 3.5s infinite ease-in-out;
 }
 
@@ -153,20 +154,6 @@ body {
     }
 }
 
-/* tulipan */
-.tulipan::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent 70%);
-    border-radius: 50%;
-    z-index: 3;
-}
-
 /* estrellas */
 .estrella {
     position: absolute;
@@ -190,18 +177,30 @@ body {
     }
 }
 
-
-/* Estilos para el contenedor de Spotify */
-.spotify-container {
-    position: absolute;
-    bottom: 20px; /* Ajusta la posición vertical */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1; /* Asegura que esté debajo del tulipán si es necesario */
+.spotify-container iframe {
+    border-radius: 12px;
+    box-shadow: 0 0 10px #00000080; 
 }
 
-/* Ajustes adicionales para el iframe de Spotify */
-.spotify-container iframe {
-    border-radius: 12px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+.mensaje-cumpleanos {
+    position: absolute;
+    text-align: center;
+    z-index: 10;
+    display: none; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.mensaje-cumpleanos img {
+    width: 85px; 
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.mensaje-cumpleanos p {
+    font-size: 15px; 
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
 }

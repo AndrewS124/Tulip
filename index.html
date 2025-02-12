@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tulip</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="tulipan">
         <!-- Tallo -->
@@ -17,21 +15,23 @@
         <div class="hoja hoja-1"></div>
         <div class="hoja hoja-2"></div>
 
-        <!-- Pétalos -->
-        <div class="petalo petalo-1"></div>
-        <div class="petalo petalo-2"></div>
-        <div class="petalo petalo-3"></div>
+        <!-- Petalos -->
+        <div class="petalo petalo-1" id="petalo-1"></div>
+        <div class="petalo petalo-2" id="petalo-2"></div>
+        <div class="petalo petalo-3" id="petalo-3"></div>
     </div>
 
-    <!-- Contenedor para Spotify -->
+    <div id="mensaje-cumpleanos" class="mensaje-cumpleanos">
+        <img src="sagePng.png" alt="Imagen de cumpleaños" id="imagen-cumpleanos">
+        <p id="texto-cumpleanos"></p>
+    </div>
+
     <div class="spotify-container">
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4X5zaUdlRhvBWYnyQIKmH8?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
 
-    <!-- Contenedor para las estrellas -->
     <div id="estrellas"></div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
